@@ -70,7 +70,7 @@ sup {
     display: inline-block;
     width: 45%;
     position: relative;
-    top: 90px;
+    top: 80px;
 }
 
 .mid-img {
@@ -155,32 +155,59 @@ sup {
     }
 }
 
-/* for regular laptops */
-@media (max-width: 1180px) {
+/* for regular laptops below */
+@media (max-width: 1440px) and (min-width: 1201px) {
     .card {
         display: block;
         width: 90%;
         left: 15px;
+        top: 45px;
     }
 
     .right {
         float: left;
         left: 50px;
-        top: 135px;
+        top: 95px;
     }
 
     .link-right {
         top: 120px;
     }
-    
-    .top-h2 {
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: normal;
+}
+
+@media (max-width: 1200px) and (min-width: 481px) {
+    .card {
+        display: block;
+        width: 90%;
+        left: 15px;
+        top: 45px;
     }
 
+    .right {
+        float: left;
+        left: 50px;
+        top: 95px;
+    }
+
+    .link-right {
+        top: 120px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 319px) {
+    .top-h2 {
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: normal;
+    }
+    
     .top-h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         margin-bottom: 0;
+    }
+
+    .text {
+        font-size: 1rem;
+        font-weight: normal;
     }
 }
