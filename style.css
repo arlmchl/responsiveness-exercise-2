@@ -4,14 +4,16 @@ body {
     background-color: #abaaaa;
 }
 
-#top-section {
+#top-image {
     height: 375px;
     width: 100%;
+    position: relative  ;
 }
 
-#top-section::before {
+#top-image::before {
     content: "";
     background-image: url("./assets/images/woods.jpg");
+    background-size: cover; /* fits the background image without repeating */
     height: 375px;
     position: absolute;
     top: 0;
@@ -21,49 +23,60 @@ body {
     opacity: 75%;
 }
 
-.font1 {
+#top-section {
+    position: absolute;
+    left: 35px;
+    height: 375px;
+}
+
+.general-font {
     font-family: 'IM Fell DW Pica', serif;
     color: white;
 }
 
-.font2 {
+.secondary-font {
     font-family: 'IM Fell DW Pica SC', serif;
-    color: #000000;
 }
 
-.font3 {
-    font-family: 'IM Fell DW Pica', serif;
-    color: #202020;
-}
-
-#top-content {
-    position: absolute;
-    top: 5px;
-    left: 35px;
-}
-
-.top-h2 {
-    font-size: 2rem;
+.italicized {
     font-style: italic;
+}
+
+.header-1 {
     font-weight: normal;
-}
-
-.top-h1 {
-    font-size: 5rem;
-    margin-bottom: 0;
-}
-
-.top-footer {
-    font-size: x-small;
-    margin-top: 20px;
-}
-
-#head-i {
-    font-style: italic;
+    font-size: 2rem;
 }
 
 sup {
     font-size: small;
+}
+
+.header-2 {
+    font-size: 5rem;
+}
+
+.h-footer {
+    position: relative;
+    font-size: x-small;
+    top: -35px;
+}
+
+.body-img {
+    height: 200px;
+    margin-right: 35px;
+    float: left;
+}
+
+.links {
+    display: inline-block;
+    margin: 0;
+}
+
+.icons {
+    height: 25px;
+    position: relative;
+    top: 5px;
+    margin-left: 5px;
 }
 
 .card {
@@ -71,108 +84,46 @@ sup {
     width: 45%;
     position: relative;
     top: 80px;
-}
-
-.mid-img {
-    height: 200px;
-    margin-right: 35px;
-    float: left;
+    color: black;
+    font-size: 1.2rem;
 }
 
 .left {
+    left: 35px;
     float: left;
-    margin-left: 35px;
+}
+
+.left p.secondary-font {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 19px;
 }
 
 .right {
     float: right;
-    margin-right: 35px;
+    right: 35px;
 }
 
-.left-t {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.text {
-    font-size: 1.2rem;
-    font-weight: normal;
-}
-
-.link-left {
-    position: absolute;
-    left: 235px;
-    height: 25px;
-    width: 300px;
-}
-
-.label1 {
-    display: inline;
-    position: relative;
-    bottom: 6px;
-    font-size: 1rem;
-}
-
-.icons {
-    height: 25px;
-    margin-left: 10px;
-}
-
-.link-right {
-    position: absolute;
-    left: 390px;
-    height: 25px;
-    width: 300px;
-}
-
-.bot-footer {
+.b-footer {
     clear: both;
     text-align: right;
     margin-right: 35px;
     position: relative;
     top: 135px;
-    font-style: italic;
+    color: white;
 }
 
-/* for large screens */
-@media (min-width: 1601px) {
-    .card {
-        display: block;
-        width: 65%;
-        position: relative;
-        top: 75px;
-    }
-
-    .right {
-        float: left;
-        margin-top: 45px;
-        margin-left: 35px;
-    }
-
-    .link-right {
-        position: absolute;
-        left: 390px;
-        top: 70px;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 681px) {
+@media (max-width: 1430px) {
     .card {
         display: block;
         width: 90%;
-        position: relative;
-        top: 75px;
+        top: 65px;
+        font-size: 1rem;
     }
 
     .right {
         float: left;
-        margin-top: 45px;
-        margin-left: 35px;
-    }
-}
-
-@media (max-width: 425px) {
-    .card .left-t {
-        font-size: 0.6rem;
+        left: 35px;
+        top: 100px;
     }
 }
