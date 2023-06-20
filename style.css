@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #abaaaa;
+}
+
+#top-image {
+    height: 375px;
+    width: 100%;
+    position: relative  ;
+}
+
+#top-image::before {
+    content: "";
+    background-image: url("./assets/images/woods.jpg");
+    background-size: cover; /* fits the background image without repeating */
+    height: 375px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 75%;
+}
+
+#top-section {
+    position: absolute;
+    left: 35px;
+    height: 375px;
+}
+
+.general-font {
+    font-family: 'IM Fell DW Pica', serif;
+    color: white;
+}
+
+.secondary-font {
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
+.italicized {
+    font-style: italic;
+}
+
+.header-1 {
+    font-weight: normal;
+    font-size: 2rem;
+}   
+
+sup {
+    font-size: small;
+}
+
+.header-2 {
+    font-size: 5rem;
+}
+
+.h-footer {
+    position: relative;
+    font-size: x-small;
+    top: -35px;
+}
+
+.body-img {
+    height: 200px;
+    margin-right: 35px;
+    float: left;
+}
+
+.links {
+    display: inline-block;
+    margin: 0;
+}
+
+.icons {
+    height: 25px;
+    position: relative;
+    top: 5px;
+    margin-left: 5px;
+}
+
+.card {
+    display: inline-block;
+    width: 45%;
+    position: relative;
+    top: 80px;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.left {
+    left: 35px;
+    float: left;
+}
+
+.left p.secondary-font {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 19px;
+}
+
+.right {
+    float: right;
+    right: 35px;
+}
+
+.b-footer {
+    clear: both;
+    text-align: right;
+    margin-right: 35px;
+    position: relative;
+    top: 135px;
+    color: white;
+}
+
+/* mobile */
+@media (max-width: 480px) {
+    #top-image {
+        height: 250px;
+    }
+
+    #top-image::before {
+        height: 250px;
+    }
+
+    #top-section {
+        position: absolute;
+        left: 35px;
+        height: 100px;
+    }
+
+    .header-1 {
+        font-size: 1.5rem;
+    }
+
+    .header-2 {
+        font-size: 2rem;
+    }
+
+    .h-footer {
+        font-size: xx-small;
+        top: 45px;
+    }
+
+    .body-img {
+        float: none;
+        height: 160px;
+    }
+
+    .card {
+        display: block;
+        width: 80%;
+        top: 45px;
+        font-size: 1rem;
+    }
+
+    .right {
+        float: none;
+        left: 35px;
+        top: 90px;
+    }
+}
+
+/* tablet */
+@media (max-width: 1200px) and (min-width: 481px) {
+    .header-2 {
+        font-size: 4rem;
+    }
+
+    .h-footer {
+        top: 25px;
+    }
+
+    .card {
+        display: block;
+        width: 95%;
+        top: 45px;
+        font-size: 1.1rem;
+    }
+
+    .right {
+        float: left;    
+        margin-left: 70px;
+        top: 100px;
+    }
+}
